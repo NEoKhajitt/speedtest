@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  speedtest:
+    image: neokhajitt/speedtest:latest
+    container_name: khajitt-speedtest
+    restart: unless-stopped
+    environment:
+        MQTTUSER: 'YOUR-MQTT-USERNAME'
+        MQTTPASSWORD: 'YOUR-MQTT-PASSWORD'
+        MQTTHOST: 'YOUR-MQTT-HOST'
+        MQTTPORT: '1883'
+        TEST_INTERVAL: '1800' ##In Seconds
+        MQTTTOPIC: 'homeassistant/speedtestresult' ## You might want to changes this if you wont use it for homeassistant
