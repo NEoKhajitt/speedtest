@@ -1,13 +1,21 @@
-version: '3.7'
 services:
   speedtest:
     image: neokhajitt/speedtest:latest
-    container_name: khajitt-speedtest
+    container_name: speedtest
     restart: unless-stopped
     environment:
-        MQTTUSER: 'YOUR-MQTT-USERNAME'
-        MQTTPASSWORD: 'YOUR-MQTT-PASSWORD'
-        MQTTHOST: 'YOUR-MQTT-HOST'
-        MQTTPORT: '1883'
-        TEST_INTERVAL: '1800' ##In Seconds
-        MQTTTOPIC: 'homeassistant/speedtestresult' ## You might want to changes this if you wont use it for homeassistant
+        MQTTUSER: '' ## Optional if mosquitto is setup to use annonymous login
+        MQTTPASSWORD: '' ## Optional if mosquitto is setup to use annonymous login
+        MQTTHOST: 'mosquitto' ## hostname or IP address that is reachable from docker or host.
+        MQTTPORT: '1883' ## Default mosquitto port
+        TEST_INTERVAL: '1800' ## In Seconds
+        MQTTTOPIC: 'homeassistant/speedtestresult' ## You might want to changes this if you wont use it for homeassistant.
+        TZ: Africa/Johannesburg ## Update to your timezone see: https://data.iana.org/time-zones/tzdb-2021a/zone1970.tab
+    networks: ## This is optional, if used homeassistant runs in docker this should match the docker network homeassistant and mosquitto runs on.
+      - homeassistant-20_home_services_net
+    dns: ## Optional, if docker setup is not properly configured to use public dns the speedtest migth have extremely high latency and inacurate speeds
+      - 8.8.8.8
+      - 1.1.1.1
+networks: ## This is optional, should be enabled if networks are used above.
+  homeassistant-20_home_services_net:
+    external: true

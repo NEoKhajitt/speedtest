@@ -1,0 +1,1709 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/main/sarif-2.1/schema/sarif-schema-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "fullName": "Trivy Vulnerability Scanner",
+          "informationUri": "https://github.com/aquasecurity/trivy",
+          "name": "Trivy",
+          "rules": [
+            {
+              "id": "CVE-2024-28085",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "util-linux: CVE-2024-28085: wall: escape sequence injection"
+              },
+              "fullDescription": {
+                "text": "wall in util-linux through 2.40, often installed with setgid tty permissions, allows escape sequences to be sent to other users' terminals through argv. (Specifically, escape sequences received from stdin are blocked, but escape sequences received from argv are not blocked.) There may be plausible scenarios where this leads to account takeover."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-28085",
+              "help": {
+                "text": "Vulnerability CVE-2024-28085\nSeverity: MEDIUM\nPackage: util-linux\nFixed Version: 2.34-0.1ubuntu9.5\nLink: [CVE-2024-28085](https://avd.aquasec.com/nvd/cve-2024-28085)\nwall in util-linux through 2.40, often installed with setgid tty permissions, allows escape sequences to be sent to other users' terminals through argv. (Specifically, escape sequences received from stdin are blocked, but escape sequences received from argv are not blocked.) There may be plausible scenarios where this leads to account takeover.",
+                "markdown": "**Vulnerability CVE-2024-28085**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|util-linux|2.34-0.1ubuntu9.5|[CVE-2024-28085](https://avd.aquasec.com/nvd/cve-2024-28085)|\n\nwall in util-linux through 2.40, often installed with setgid tty permissions, allows escape sequences to be sent to other users' terminals through argv. (Specifically, escape sequences received from stdin are blocked, but escape sequences received from argv are not blocked.) There may be plausible scenarios where this leads to account takeover."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-2961",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "glibc: Out of bounds write in iconv may lead to remote code execution"
+              },
+              "fullDescription": {
+                "text": "The iconv() function in the GNU C Library versions 2.39 and older may overflow the output buffer passed to it by up to 4 bytes when converting strings to the ISO-2022-CN-EXT character set, which may be used to crash an application or overwrite a neighbouring variable."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-2961",
+              "help": {
+                "text": "Vulnerability CVE-2024-2961\nSeverity: MEDIUM\nPackage: libc6\nFixed Version: 2.31-0ubuntu9.15\nLink: [CVE-2024-2961](https://avd.aquasec.com/nvd/cve-2024-2961)\nThe iconv() function in the GNU C Library versions 2.39 and older may overflow the output buffer passed to it by up to 4 bytes when converting strings to the ISO-2022-CN-EXT character set, which may be used to crash an application or overwrite a neighbouring variable.",
+                "markdown": "**Vulnerability CVE-2024-2961**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libc6|2.31-0ubuntu9.15|[CVE-2024-2961](https://avd.aquasec.com/nvd/cve-2024-2961)|\n\nThe iconv() function in the GNU C Library versions 2.39 and older may overflow the output buffer passed to it by up to 4 bytes when converting strings to the ISO-2022-CN-EXT character set, which may be used to crash an application or overwrite a neighbouring variable."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-33599",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "glibc: stack-based buffer overflow in netgroup cache"
+              },
+              "fullDescription": {
+                "text": "nscd: Stack-based buffer overflow in netgroup cache\n\nIf the Name Service Cache Daemon's (nscd) fixed size cache is exhausted\nby client requests then a subsequent client request for netgroup data\nmay result in a stack-based buffer overflow.  This flaw was introduced\nin glibc 2.15 when the cache was added to nscd.\n\nThis vulnerability is only present in the nscd binary."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-33599",
+              "help": {
+                "text": "Vulnerability CVE-2024-33599\nSeverity: MEDIUM\nPackage: libc6\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33599](https://avd.aquasec.com/nvd/cve-2024-33599)\nnscd: Stack-based buffer overflow in netgroup cache\n\nIf the Name Service Cache Daemon's (nscd) fixed size cache is exhausted\nby client requests then a subsequent client request for netgroup data\nmay result in a stack-based buffer overflow.  This flaw was introduced\nin glibc 2.15 when the cache was added to nscd.\n\nThis vulnerability is only present in the nscd binary.",
+                "markdown": "**Vulnerability CVE-2024-33599**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libc6|2.31-0ubuntu9.16|[CVE-2024-33599](https://avd.aquasec.com/nvd/cve-2024-33599)|\n\nnscd: Stack-based buffer overflow in netgroup cache\n\nIf the Name Service Cache Daemon's (nscd) fixed size cache is exhausted\nby client requests then a subsequent client request for netgroup data\nmay result in a stack-based buffer overflow.  This flaw was introduced\nin glibc 2.15 when the cache was added to nscd.\n\nThis vulnerability is only present in the nscd binary."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-33600",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "glibc: null pointer dereferences after failed netgroup cache insertion"
+              },
+              "fullDescription": {
+                "text": "nscd: Null pointer crashes after notfound response\n\nIf the Name Service Cache Daemon's (nscd) cache fails to add a not-found\nnetgroup response to the cache, the client request can result in a null\npointer dereference.  This flaw was introduced in glibc 2.15 when the\ncache was added to nscd.\n\nThis vulnerability is only present in the nscd binary."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-33600",
+              "help": {
+                "text": "Vulnerability CVE-2024-33600\nSeverity: MEDIUM\nPackage: libc6\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33600](https://avd.aquasec.com/nvd/cve-2024-33600)\nnscd: Null pointer crashes after notfound response\n\nIf the Name Service Cache Daemon's (nscd) cache fails to add a not-found\nnetgroup response to the cache, the client request can result in a null\npointer dereference.  This flaw was introduced in glibc 2.15 when the\ncache was added to nscd.\n\nThis vulnerability is only present in the nscd binary.",
+                "markdown": "**Vulnerability CVE-2024-33600**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libc6|2.31-0ubuntu9.16|[CVE-2024-33600](https://avd.aquasec.com/nvd/cve-2024-33600)|\n\nnscd: Null pointer crashes after notfound response\n\nIf the Name Service Cache Daemon's (nscd) cache fails to add a not-found\nnetgroup response to the cache, the client request can result in a null\npointer dereference.  This flaw was introduced in glibc 2.15 when the\ncache was added to nscd.\n\nThis vulnerability is only present in the nscd binary."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-33601",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "glibc: netgroup cache may terminate daemon on memory allocation failure"
+              },
+              "fullDescription": {
+                "text": "nscd: netgroup cache may terminate daemon on memory allocation failure\n\nThe Name Service Cache Daemon's (nscd) netgroup cache uses xmalloc or\nxrealloc and these functions may terminate the process due to a memory\nallocation failure resulting in a denial of service to the clients.  The\nflaw was introduced in glibc 2.15 when the cache was added to nscd.\n\nThis vulnerability is only present in the nscd binary."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-33601",
+              "help": {
+                "text": "Vulnerability CVE-2024-33601\nSeverity: MEDIUM\nPackage: libc6\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33601](https://avd.aquasec.com/nvd/cve-2024-33601)\nnscd: netgroup cache may terminate daemon on memory allocation failure\n\nThe Name Service Cache Daemon's (nscd) netgroup cache uses xmalloc or\nxrealloc and these functions may terminate the process due to a memory\nallocation failure resulting in a denial of service to the clients.  The\nflaw was introduced in glibc 2.15 when the cache was added to nscd.\n\nThis vulnerability is only present in the nscd binary.",
+                "markdown": "**Vulnerability CVE-2024-33601**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libc6|2.31-0ubuntu9.16|[CVE-2024-33601](https://avd.aquasec.com/nvd/cve-2024-33601)|\n\nnscd: netgroup cache may terminate daemon on memory allocation failure\n\nThe Name Service Cache Daemon's (nscd) netgroup cache uses xmalloc or\nxrealloc and these functions may terminate the process due to a memory\nallocation failure resulting in a denial of service to the clients.  The\nflaw was introduced in glibc 2.15 when the cache was added to nscd.\n\nThis vulnerability is only present in the nscd binary."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-33602",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "glibc: netgroup cache assumes NSS callback uses in-buffer strings"
+              },
+              "fullDescription": {
+                "text": "nscd: netgroup cache assumes NSS callback uses in-buffer strings\n\nThe Name Service Cache Daemon's (nscd) netgroup cache can corrupt memory\nwhen the NSS callback does not store all strings in the provided buffer.\nThe flaw was introduced in glibc 2.15 when the cache was added to nscd.\n\nThis vulnerability is only present in the nscd binary."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-33602",
+              "help": {
+                "text": "Vulnerability CVE-2024-33602\nSeverity: MEDIUM\nPackage: libc6\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33602](https://avd.aquasec.com/nvd/cve-2024-33602)\nnscd: netgroup cache assumes NSS callback uses in-buffer strings\n\nThe Name Service Cache Daemon's (nscd) netgroup cache can corrupt memory\nwhen the NSS callback does not store all strings in the provided buffer.\nThe flaw was introduced in glibc 2.15 when the cache was added to nscd.\n\nThis vulnerability is only present in the nscd binary.",
+                "markdown": "**Vulnerability CVE-2024-33602**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libc6|2.31-0ubuntu9.16|[CVE-2024-33602](https://avd.aquasec.com/nvd/cve-2024-33602)|\n\nnscd: netgroup cache assumes NSS callback uses in-buffer strings\n\nThe Name Service Cache Daemon's (nscd) netgroup cache can corrupt memory\nwhen the NSS callback does not store all strings in the provided buffer.\nThe flaw was introduced in glibc 2.15 when the cache was added to nscd.\n\nThis vulnerability is only present in the nscd binary."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-0395",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "glibc: buffer overflow in the GNU C Library's assert()"
+              },
+              "fullDescription": {
+                "text": "When the assert() function in the GNU C Library versions 2.13 to 2.40 fails, it does not allocate enough space for the assertion failure message string and size information, which may lead to a buffer overflow if the message string size aligns to page size."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-0395",
+              "help": {
+                "text": "Vulnerability CVE-2025-0395\nSeverity: MEDIUM\nPackage: libc6\nFixed Version: 2.31-0ubuntu9.17\nLink: [CVE-2025-0395](https://avd.aquasec.com/nvd/cve-2025-0395)\nWhen the assert() function in the GNU C Library versions 2.13 to 2.40 fails, it does not allocate enough space for the assertion failure message string and size information, which may lead to a buffer overflow if the message string size aligns to page size.",
+                "markdown": "**Vulnerability CVE-2025-0395**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libc6|2.31-0ubuntu9.17|[CVE-2025-0395](https://avd.aquasec.com/nvd/cve-2025-0395)|\n\nWhen the assert() function in the GNU C Library versions 2.13 to 2.40 fails, it does not allocate enough space for the assertion failure message string and size information, which may lead to a buffer overflow if the message string size aligns to page size."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2025-4802",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "glibc: static setuid binary dlopen may incorrectly search LD_LIBRARY_PATH"
+              },
+              "fullDescription": {
+                "text": "Untrusted LD_LIBRARY_PATH environment variable vulnerability in the GNU C Library version 2.27 to 2.38 allows attacker controlled loading of dynamically shared library in statically compiled setuid binaries that call dlopen (including internal dlopen calls after setlocale or calls to NSS functions such as getaddrinfo)."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2025-4802",
+              "help": {
+                "text": "Vulnerability CVE-2025-4802\nSeverity: MEDIUM\nPackage: libc6\nFixed Version: 2.31-0ubuntu9.18\nLink: [CVE-2025-4802](https://avd.aquasec.com/nvd/cve-2025-4802)\nUntrusted LD_LIBRARY_PATH environment variable vulnerability in the GNU C Library version 2.27 to 2.38 allows attacker controlled loading of dynamically shared library in statically compiled setuid binaries that call dlopen (including internal dlopen calls after setlocale or calls to NSS functions such as getaddrinfo).",
+                "markdown": "**Vulnerability CVE-2025-4802**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libc6|2.31-0ubuntu9.18|[CVE-2025-4802](https://avd.aquasec.com/nvd/cve-2025-4802)|\n\nUntrusted LD_LIBRARY_PATH environment variable vulnerability in the GNU C Library version 2.27 to 2.38 allows attacker controlled loading of dynamically shared library in statically compiled setuid binaries that call dlopen (including internal dlopen calls after setlocale or calls to NSS functions such as getaddrinfo)."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-4806",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "glibc: potential use-after-free in getaddrinfo()"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. In an extremely rare situation, the getaddrinfo function may access memory that has been freed, resulting in an application crash. This issue is only exploitable when a NSS module implements only the _nss_*_gethostbyname2_r and _nss_*_getcanonname_r hooks without implementing the _nss_*_gethostbyname3_r hook. The resolved name should return a large number of IPv6 and IPv4, and the call to the getaddrinfo function should have the AF_INET6 address family with AI_CANONNAME, AI_ALL and AI_V4MAPPED as flags."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-4806",
+              "help": {
+                "text": "Vulnerability CVE-2023-4806\nSeverity: LOW\nPackage: libc6\nFixed Version: 2.31-0ubuntu9.14\nLink: [CVE-2023-4806](https://avd.aquasec.com/nvd/cve-2023-4806)\nA flaw was found in glibc. In an extremely rare situation, the getaddrinfo function may access memory that has been freed, resulting in an application crash. This issue is only exploitable when a NSS module implements only the _nss_*_gethostbyname2_r and _nss_*_getcanonname_r hooks without implementing the _nss_*_gethostbyname3_r hook. The resolved name should return a large number of IPv6 and IPv4, and the call to the getaddrinfo function should have the AF_INET6 address family with AI_CANONNAME, AI_ALL and AI_V4MAPPED as flags.",
+                "markdown": "**Vulnerability CVE-2023-4806**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|libc6|2.31-0ubuntu9.14|[CVE-2023-4806](https://avd.aquasec.com/nvd/cve-2023-4806)|\n\nA flaw was found in glibc. In an extremely rare situation, the getaddrinfo function may access memory that has been freed, resulting in an application crash. This issue is only exploitable when a NSS module implements only the _nss_*_gethostbyname2_r and _nss_*_getcanonname_r hooks without implementing the _nss_*_gethostbyname3_r hook. The resolved name should return a large number of IPv6 and IPv4, and the call to the getaddrinfo function should have the AF_INET6 address family with AI_CANONNAME, AI_ALL and AI_V4MAPPED as flags."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "2.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-4813",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "glibc: potential use-after-free in gaih_inet()"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in glibc. In an uncommon situation, the gaih_inet function may use memory that has been freed, resulting in an application crash. This issue is only exploitable when the getaddrinfo function is called and the hosts database in /etc/nsswitch.conf is configured with SUCCESS=continue or SUCCESS=merge."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-4813",
+              "help": {
+                "text": "Vulnerability CVE-2023-4813\nSeverity: LOW\nPackage: libc6\nFixed Version: 2.31-0ubuntu9.14\nLink: [CVE-2023-4813](https://avd.aquasec.com/nvd/cve-2023-4813)\nA flaw was found in glibc. In an uncommon situation, the gaih_inet function may use memory that has been freed, resulting in an application crash. This issue is only exploitable when the getaddrinfo function is called and the hosts database in /etc/nsswitch.conf is configured with SUCCESS=continue or SUCCESS=merge.",
+                "markdown": "**Vulnerability CVE-2023-4813**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|libc6|2.31-0ubuntu9.14|[CVE-2023-4813](https://avd.aquasec.com/nvd/cve-2023-4813)|\n\nA flaw was found in glibc. In an uncommon situation, the gaih_inet function may use memory that has been freed, resulting in an application crash. This issue is only exploitable when the getaddrinfo function is called and the hosts database in /etc/nsswitch.conf is configured with SUCCESS=continue or SUCCESS=merge."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "2.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-5981",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "gnutls: timing side-channel in the RSA-PSK authentication"
+              },
+              "fullDescription": {
+                "text": "A vulnerability was found that the response times to malformed ciphertexts in RSA-PSK ClientKeyExchange differ from response times of ciphertexts with correct PKCS#1 v1.5 padding."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-5981",
+              "help": {
+                "text": "Vulnerability CVE-2023-5981\nSeverity: MEDIUM\nPackage: libgnutls30\nFixed Version: 3.6.13-2ubuntu1.9\nLink: [CVE-2023-5981](https://avd.aquasec.com/nvd/cve-2023-5981)\nA vulnerability was found that the response times to malformed ciphertexts in RSA-PSK ClientKeyExchange differ from response times of ciphertexts with correct PKCS#1 v1.5 padding.",
+                "markdown": "**Vulnerability CVE-2023-5981**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libgnutls30|3.6.13-2ubuntu1.9|[CVE-2023-5981](https://avd.aquasec.com/nvd/cve-2023-5981)|\n\nA vulnerability was found that the response times to malformed ciphertexts in RSA-PSK ClientKeyExchange differ from response times of ciphertexts with correct PKCS#1 v1.5 padding."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-0553",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "gnutls: incomplete fix for CVE-2023-5981"
+              },
+              "fullDescription": {
+                "text": "A vulnerability was found in GnuTLS. The response times to malformed ciphertexts in RSA-PSK ClientKeyExchange differ from the response times of ciphertexts with correct PKCS#1 v1.5 padding. This issue may allow a remote attacker to perform a timing side-channel attack in the RSA-PSK key exchange, potentially leading to the leakage of sensitive data. CVE-2024-0553 is designated as an incomplete resolution for CVE-2023-5981."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-0553",
+              "help": {
+                "text": "Vulnerability CVE-2024-0553\nSeverity: MEDIUM\nPackage: libgnutls30\nFixed Version: 3.6.13-2ubuntu1.10\nLink: [CVE-2024-0553](https://avd.aquasec.com/nvd/cve-2024-0553)\nA vulnerability was found in GnuTLS. The response times to malformed ciphertexts in RSA-PSK ClientKeyExchange differ from the response times of ciphertexts with correct PKCS#1 v1.5 padding. This issue may allow a remote attacker to perform a timing side-channel attack in the RSA-PSK key exchange, potentially leading to the leakage of sensitive data. CVE-2024-0553 is designated as an incomplete resolution for CVE-2023-5981.",
+                "markdown": "**Vulnerability CVE-2024-0553**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libgnutls30|3.6.13-2ubuntu1.10|[CVE-2024-0553](https://avd.aquasec.com/nvd/cve-2024-0553)|\n\nA vulnerability was found in GnuTLS. The response times to malformed ciphertexts in RSA-PSK ClientKeyExchange differ from the response times of ciphertexts with correct PKCS#1 v1.5 padding. This issue may allow a remote attacker to perform a timing side-channel attack in the RSA-PSK key exchange, potentially leading to the leakage of sensitive data. CVE-2024-0553 is designated as an incomplete resolution for CVE-2023-5981."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-12243",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "gnutls: GnuTLS Impacted by Inefficient DER Decoding in libtasn1 Leading to Remote DoS"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in GnuTLS, which relies on libtasn1 for ASN.1 data processing. Due to an inefficient algorithm in libtasn1, decoding certain DER-encoded certificate data can take excessive time, leading to increased resource consumption. This flaw allows a remote attacker to send a specially crafted certificate, causing GnuTLS to become unresponsive or slow, resulting in a denial-of-service condition."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-12243",
+              "help": {
+                "text": "Vulnerability CVE-2024-12243\nSeverity: MEDIUM\nPackage: libgnutls30\nFixed Version: 3.6.13-2ubuntu1.12\nLink: [CVE-2024-12243](https://avd.aquasec.com/nvd/cve-2024-12243)\nA flaw was found in GnuTLS, which relies on libtasn1 for ASN.1 data processing. Due to an inefficient algorithm in libtasn1, decoding certain DER-encoded certificate data can take excessive time, leading to increased resource consumption. This flaw allows a remote attacker to send a specially crafted certificate, causing GnuTLS to become unresponsive or slow, resulting in a denial-of-service condition.",
+                "markdown": "**Vulnerability CVE-2024-12243**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libgnutls30|3.6.13-2ubuntu1.12|[CVE-2024-12243](https://avd.aquasec.com/nvd/cve-2024-12243)|\n\nA flaw was found in GnuTLS, which relies on libtasn1 for ASN.1 data processing. Due to an inefficient algorithm in libtasn1, decoding certain DER-encoded certificate data can take excessive time, leading to increased resource consumption. This flaw allows a remote attacker to send a specially crafted certificate, causing GnuTLS to become unresponsive or slow, resulting in a denial-of-service condition."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-28834",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "gnutls: vulnerable to Minerva side-channel information leak"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in GnuTLS. The Minerva attack is a cryptographic vulnerability that exploits deterministic behavior in systems like GnuTLS, leading to side-channel leaks. In specific scenarios, such as when using the GNUTLS_PRIVKEY_FLAG_REPRODUCIBLE flag, it can result in a noticeable step in nonce size from 513 to 512 bits, exposing a potential timing side-channel."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-28834",
+              "help": {
+                "text": "Vulnerability CVE-2024-28834\nSeverity: MEDIUM\nPackage: libgnutls30\nFixed Version: 3.6.13-2ubuntu1.11\nLink: [CVE-2024-28834](https://avd.aquasec.com/nvd/cve-2024-28834)\nA flaw was found in GnuTLS. The Minerva attack is a cryptographic vulnerability that exploits deterministic behavior in systems like GnuTLS, leading to side-channel leaks. In specific scenarios, such as when using the GNUTLS_PRIVKEY_FLAG_REPRODUCIBLE flag, it can result in a noticeable step in nonce size from 513 to 512 bits, exposing a potential timing side-channel.",
+                "markdown": "**Vulnerability CVE-2024-28834**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libgnutls30|3.6.13-2ubuntu1.11|[CVE-2024-28834](https://avd.aquasec.com/nvd/cve-2024-28834)|\n\nA flaw was found in GnuTLS. The Minerva attack is a cryptographic vulnerability that exploits deterministic behavior in systems like GnuTLS, leading to side-channel leaks. In specific scenarios, such as when using the GNUTLS_PRIVKEY_FLAG_REPRODUCIBLE flag, it can result in a noticeable step in nonce size from 513 to 512 bits, exposing a potential timing side-channel."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-22365",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "pam: allowing unprivileged user to block another user namespace"
+              },
+              "fullDescription": {
+                "text": "linux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-22365",
+              "help": {
+                "text": "Vulnerability CVE-2024-22365\nSeverity: MEDIUM\nPackage: libpam0g\nFixed Version: 1.3.1-5ubuntu4.7\nLink: [CVE-2024-22365](https://avd.aquasec.com/nvd/cve-2024-22365)\nlinux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY.",
+                "markdown": "**Vulnerability CVE-2024-22365**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libpam0g|1.3.1-5ubuntu4.7|[CVE-2024-22365](https://avd.aquasec.com/nvd/cve-2024-22365)|\n\nlinux-pam (aka Linux PAM) before 1.6.0 allows attackers to cause a denial of service (blocked login process) via mkfifo because the openat call (for protect_dir) lacks O_DIRECTORY."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-4016",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "procps: ps buffer overflow"
+              },
+              "fullDescription": {
+                "text": "Under some circumstances, this weakness allows a user who has access to run the “ps” utility on a machine, the ability to write almost unlimited amounts of unfiltered data into the process heap."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-4016",
+              "help": {
+                "text": "Vulnerability CVE-2023-4016\nSeverity: LOW\nPackage: procps\nFixed Version: 2:3.3.16-1ubuntu2.4\nLink: [CVE-2023-4016](https://avd.aquasec.com/nvd/cve-2023-4016)\nUnder some circumstances, this weakness allows a user who has access to run the “ps” utility on a machine, the ability to write almost unlimited amounts of unfiltered data into the process heap.",
+                "markdown": "**Vulnerability CVE-2023-4016**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|procps|2:3.3.16-1ubuntu2.4|[CVE-2023-4016](https://avd.aquasec.com/nvd/cve-2023-4016)|\n\nUnder some circumstances, this weakness allows a user who has access to run the “ps” utility on a machine, the ability to write almost unlimited amounts of unfiltered data into the process heap."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "2.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2024-12133",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "libtasn1: Inefficient DER Decoding in libtasn1 Leading to Potential Remote DoS"
+              },
+              "fullDescription": {
+                "text": "A flaw in libtasn1 causes inefficient handling of specific certificate data. When processing a large number of elements in a certificate, libtasn1 takes much longer than expected, which can slow down or even crash the system. This flaw allows an attacker to send a specially crafted certificate, causing a denial of service attack."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2024-12133",
+              "help": {
+                "text": "Vulnerability CVE-2024-12133\nSeverity: MEDIUM\nPackage: libtasn1-6\nFixed Version: 4.16.0-2ubuntu0.1\nLink: [CVE-2024-12133](https://avd.aquasec.com/nvd/cve-2024-12133)\nA flaw in libtasn1 causes inefficient handling of specific certificate data. When processing a large number of elements in a certificate, libtasn1 takes much longer than expected, which can slow down or even crash the system. This flaw allows an attacker to send a specially crafted certificate, causing a denial of service attack.",
+                "markdown": "**Vulnerability CVE-2024-12133**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|libtasn1-6|4.16.0-2ubuntu0.1|[CVE-2024-12133](https://avd.aquasec.com/nvd/cve-2024-12133)|\n\nA flaw in libtasn1 causes inefficient handling of specific certificate data. When processing a large number of elements in a certificate, libtasn1 takes much longer than expected, which can slow down or even crash the system. This flaw allows an attacker to send a specially crafted certificate, causing a denial of service attack."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-4641",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "shadow-utils: possible password leak during passwd(1) change"
+              },
+              "fullDescription": {
+                "text": "A flaw was found in shadow-utils. When asking for a new password, shadow-utils asks the password twice. If the password fails on the second attempt, shadow-utils fails in cleaning the buffer used to store the first entry. This may allow an attacker with enough access to retrieve the password from the memory."
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-4641",
+              "help": {
+                "text": "Vulnerability CVE-2023-4641\nSeverity: LOW\nPackage: passwd\nFixed Version: 1:4.8.1-1ubuntu5.20.04.5\nLink: [CVE-2023-4641](https://avd.aquasec.com/nvd/cve-2023-4641)\nA flaw was found in shadow-utils. When asking for a new password, shadow-utils asks the password twice. If the password fails on the second attempt, shadow-utils fails in cleaning the buffer used to store the first entry. This may allow an attacker with enough access to retrieve the password from the memory.",
+                "markdown": "**Vulnerability CVE-2023-4641**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|LOW|passwd|1:4.8.1-1ubuntu5.20.04.5|[CVE-2023-4641](https://avd.aquasec.com/nvd/cve-2023-4641)|\n\nA flaw was found in shadow-utils. When asking for a new password, shadow-utils asks the password twice. If the password fails on the second attempt, shadow-utils fails in cleaning the buffer used to store the first entry. This may allow an attacker with enough access to retrieve the password from the memory."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "2.0",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "LOW"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-47038",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "perl: Write past buffer end via illegal user-defined Unicode property"
+              },
+              "fullDescription": {
+                "text": "A vulnerability was found in perl 5.30.0 through 5.38.0. This issue occurs when a crafted regular expression is compiled by perl, which can allow an attacker controlled byte buffer overflow in a heap allocated buffer."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-47038",
+              "help": {
+                "text": "Vulnerability CVE-2023-47038\nSeverity: MEDIUM\nPackage: perl-base\nFixed Version: 5.30.0-9ubuntu0.5\nLink: [CVE-2023-47038](https://avd.aquasec.com/nvd/cve-2023-47038)\nA vulnerability was found in perl 5.30.0 through 5.38.0. This issue occurs when a crafted regular expression is compiled by perl, which can allow an attacker controlled byte buffer overflow in a heap allocated buffer.",
+                "markdown": "**Vulnerability CVE-2023-47038**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|perl-base|5.30.0-9ubuntu0.5|[CVE-2023-47038](https://avd.aquasec.com/nvd/cve-2023-47038)|\n\nA vulnerability was found in perl 5.30.0 through 5.38.0. This issue occurs when a crafted regular expression is compiled by perl, which can allow an attacker controlled byte buffer overflow in a heap allocated buffer."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            },
+            {
+              "id": "CVE-2023-39804",
+              "name": "OsPackageVulnerability",
+              "shortDescription": {
+                "text": "tar: Incorrectly handled extension attributes in PAX archives can lead to a crash"
+              },
+              "fullDescription": {
+                "text": "In GNU tar before 1.35, mishandled extension attributes in a PAX archive can lead to an application crash in xheader.c."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "helpUri": "https://avd.aquasec.com/nvd/cve-2023-39804",
+              "help": {
+                "text": "Vulnerability CVE-2023-39804\nSeverity: MEDIUM\nPackage: tar\nFixed Version: 1.30+dfsg-7ubuntu0.20.04.4\nLink: [CVE-2023-39804](https://avd.aquasec.com/nvd/cve-2023-39804)\nIn GNU tar before 1.35, mishandled extension attributes in a PAX archive can lead to an application crash in xheader.c.",
+                "markdown": "**Vulnerability CVE-2023-39804**\n| Severity | Package | Fixed Version | Link |\n| --- | --- | --- | --- |\n|MEDIUM|tar|1.30+dfsg-7ubuntu0.20.04.4|[CVE-2023-39804](https://avd.aquasec.com/nvd/cve-2023-39804)|\n\nIn GNU tar before 1.35, mishandled extension attributes in a PAX archive can lead to an application crash in xheader.c."
+              },
+              "properties": {
+                "precision": "very-high",
+                "security-severity": "5.5",
+                "tags": [
+                  "vulnerability",
+                  "security",
+                  "MEDIUM"
+                ]
+              }
+            }
+          ],
+          "version": "0.65.0"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "CVE-2024-28085",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: bsdutils\nInstalled Version: 1:2.34-0.1ubuntu9.4\nVulnerability CVE-2024-28085\nSeverity: MEDIUM\nFixed Version: 2.34-0.1ubuntu9.5\nLink: [CVE-2024-28085](https://avd.aquasec.com/nvd/cve-2024-28085)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: bsdutils@1:2.34-0.1ubuntu9.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-28085",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: fdisk\nInstalled Version: 2.34-0.1ubuntu9.4\nVulnerability CVE-2024-28085\nSeverity: MEDIUM\nFixed Version: 2.34-0.1ubuntu9.5\nLink: [CVE-2024-28085](https://avd.aquasec.com/nvd/cve-2024-28085)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: fdisk@2.34-0.1ubuntu9.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-28085",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: libblkid1\nInstalled Version: 2.34-0.1ubuntu9.4\nVulnerability CVE-2024-28085\nSeverity: MEDIUM\nFixed Version: 2.34-0.1ubuntu9.5\nLink: [CVE-2024-28085](https://avd.aquasec.com/nvd/cve-2024-28085)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libblkid1@2.34-0.1ubuntu9.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-2961",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc-bin\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2024-2961\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.15\nLink: [CVE-2024-2961](https://avd.aquasec.com/nvd/cve-2024-2961)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc-bin@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-33599",
+          "ruleIndex": 2,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc-bin\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2024-33599\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33599](https://avd.aquasec.com/nvd/cve-2024-33599)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc-bin@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-33600",
+          "ruleIndex": 3,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc-bin\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2024-33600\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33600](https://avd.aquasec.com/nvd/cve-2024-33600)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc-bin@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-33601",
+          "ruleIndex": 4,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc-bin\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2024-33601\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33601](https://avd.aquasec.com/nvd/cve-2024-33601)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc-bin@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-33602",
+          "ruleIndex": 5,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc-bin\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2024-33602\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33602](https://avd.aquasec.com/nvd/cve-2024-33602)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc-bin@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-0395",
+          "ruleIndex": 6,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc-bin\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2025-0395\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.17\nLink: [CVE-2025-0395](https://avd.aquasec.com/nvd/cve-2025-0395)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc-bin@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-4802",
+          "ruleIndex": 7,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc-bin\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2025-4802\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.18\nLink: [CVE-2025-4802](https://avd.aquasec.com/nvd/cve-2025-4802)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc-bin@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-4806",
+          "ruleIndex": 8,
+          "level": "note",
+          "message": {
+            "text": "Package: libc-bin\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2023-4806\nSeverity: LOW\nFixed Version: 2.31-0ubuntu9.14\nLink: [CVE-2023-4806](https://avd.aquasec.com/nvd/cve-2023-4806)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc-bin@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-4813",
+          "ruleIndex": 9,
+          "level": "note",
+          "message": {
+            "text": "Package: libc-bin\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2023-4813\nSeverity: LOW\nFixed Version: 2.31-0ubuntu9.14\nLink: [CVE-2023-4813](https://avd.aquasec.com/nvd/cve-2023-4813)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc-bin@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-2961",
+          "ruleIndex": 1,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc6\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2024-2961\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.15\nLink: [CVE-2024-2961](https://avd.aquasec.com/nvd/cve-2024-2961)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc6@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-33599",
+          "ruleIndex": 2,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc6\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2024-33599\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33599](https://avd.aquasec.com/nvd/cve-2024-33599)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc6@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-33600",
+          "ruleIndex": 3,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc6\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2024-33600\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33600](https://avd.aquasec.com/nvd/cve-2024-33600)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc6@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-33601",
+          "ruleIndex": 4,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc6\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2024-33601\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33601](https://avd.aquasec.com/nvd/cve-2024-33601)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc6@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-33602",
+          "ruleIndex": 5,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc6\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2024-33602\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.16\nLink: [CVE-2024-33602](https://avd.aquasec.com/nvd/cve-2024-33602)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc6@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-0395",
+          "ruleIndex": 6,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc6\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2025-0395\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.17\nLink: [CVE-2025-0395](https://avd.aquasec.com/nvd/cve-2025-0395)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc6@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2025-4802",
+          "ruleIndex": 7,
+          "level": "warning",
+          "message": {
+            "text": "Package: libc6\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2025-4802\nSeverity: MEDIUM\nFixed Version: 2.31-0ubuntu9.18\nLink: [CVE-2025-4802](https://avd.aquasec.com/nvd/cve-2025-4802)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc6@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-4806",
+          "ruleIndex": 8,
+          "level": "note",
+          "message": {
+            "text": "Package: libc6\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2023-4806\nSeverity: LOW\nFixed Version: 2.31-0ubuntu9.14\nLink: [CVE-2023-4806](https://avd.aquasec.com/nvd/cve-2023-4806)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc6@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-4813",
+          "ruleIndex": 9,
+          "level": "note",
+          "message": {
+            "text": "Package: libc6\nInstalled Version: 2.31-0ubuntu9.9\nVulnerability CVE-2023-4813\nSeverity: LOW\nFixed Version: 2.31-0ubuntu9.14\nLink: [CVE-2023-4813](https://avd.aquasec.com/nvd/cve-2023-4813)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libc6@2.31-0ubuntu9.9"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-28085",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: libfdisk1\nInstalled Version: 2.34-0.1ubuntu9.4\nVulnerability CVE-2024-28085\nSeverity: MEDIUM\nFixed Version: 2.34-0.1ubuntu9.5\nLink: [CVE-2024-28085](https://avd.aquasec.com/nvd/cve-2024-28085)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libfdisk1@2.34-0.1ubuntu9.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-5981",
+          "ruleIndex": 10,
+          "level": "warning",
+          "message": {
+            "text": "Package: libgnutls30\nInstalled Version: 3.6.13-2ubuntu1.8\nVulnerability CVE-2023-5981\nSeverity: MEDIUM\nFixed Version: 3.6.13-2ubuntu1.9\nLink: [CVE-2023-5981](https://avd.aquasec.com/nvd/cve-2023-5981)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libgnutls30@3.6.13-2ubuntu1.8"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-0553",
+          "ruleIndex": 11,
+          "level": "warning",
+          "message": {
+            "text": "Package: libgnutls30\nInstalled Version: 3.6.13-2ubuntu1.8\nVulnerability CVE-2024-0553\nSeverity: MEDIUM\nFixed Version: 3.6.13-2ubuntu1.10\nLink: [CVE-2024-0553](https://avd.aquasec.com/nvd/cve-2024-0553)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libgnutls30@3.6.13-2ubuntu1.8"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-12243",
+          "ruleIndex": 12,
+          "level": "warning",
+          "message": {
+            "text": "Package: libgnutls30\nInstalled Version: 3.6.13-2ubuntu1.8\nVulnerability CVE-2024-12243\nSeverity: MEDIUM\nFixed Version: 3.6.13-2ubuntu1.12\nLink: [CVE-2024-12243](https://avd.aquasec.com/nvd/cve-2024-12243)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libgnutls30@3.6.13-2ubuntu1.8"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-28834",
+          "ruleIndex": 13,
+          "level": "warning",
+          "message": {
+            "text": "Package: libgnutls30\nInstalled Version: 3.6.13-2ubuntu1.8\nVulnerability CVE-2024-28834\nSeverity: MEDIUM\nFixed Version: 3.6.13-2ubuntu1.11\nLink: [CVE-2024-28834](https://avd.aquasec.com/nvd/cve-2024-28834)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libgnutls30@3.6.13-2ubuntu1.8"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-28085",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: libmount1\nInstalled Version: 2.34-0.1ubuntu9.4\nVulnerability CVE-2024-28085\nSeverity: MEDIUM\nFixed Version: 2.34-0.1ubuntu9.5\nLink: [CVE-2024-28085](https://avd.aquasec.com/nvd/cve-2024-28085)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libmount1@2.34-0.1ubuntu9.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-22365",
+          "ruleIndex": 14,
+          "level": "warning",
+          "message": {
+            "text": "Package: libpam-modules\nInstalled Version: 1.3.1-5ubuntu4.6\nVulnerability CVE-2024-22365\nSeverity: MEDIUM\nFixed Version: 1.3.1-5ubuntu4.7\nLink: [CVE-2024-22365](https://avd.aquasec.com/nvd/cve-2024-22365)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libpam-modules@1.3.1-5ubuntu4.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-22365",
+          "ruleIndex": 14,
+          "level": "warning",
+          "message": {
+            "text": "Package: libpam-modules-bin\nInstalled Version: 1.3.1-5ubuntu4.6\nVulnerability CVE-2024-22365\nSeverity: MEDIUM\nFixed Version: 1.3.1-5ubuntu4.7\nLink: [CVE-2024-22365](https://avd.aquasec.com/nvd/cve-2024-22365)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libpam-modules-bin@1.3.1-5ubuntu4.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-22365",
+          "ruleIndex": 14,
+          "level": "warning",
+          "message": {
+            "text": "Package: libpam-runtime\nInstalled Version: 1.3.1-5ubuntu4.6\nVulnerability CVE-2024-22365\nSeverity: MEDIUM\nFixed Version: 1.3.1-5ubuntu4.7\nLink: [CVE-2024-22365](https://avd.aquasec.com/nvd/cve-2024-22365)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libpam-runtime@1.3.1-5ubuntu4.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-22365",
+          "ruleIndex": 14,
+          "level": "warning",
+          "message": {
+            "text": "Package: libpam0g\nInstalled Version: 1.3.1-5ubuntu4.6\nVulnerability CVE-2024-22365\nSeverity: MEDIUM\nFixed Version: 1.3.1-5ubuntu4.7\nLink: [CVE-2024-22365](https://avd.aquasec.com/nvd/cve-2024-22365)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libpam0g@1.3.1-5ubuntu4.6"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-4016",
+          "ruleIndex": 15,
+          "level": "note",
+          "message": {
+            "text": "Package: libprocps8\nInstalled Version: 2:3.3.16-1ubuntu2.3\nVulnerability CVE-2023-4016\nSeverity: LOW\nFixed Version: 2:3.3.16-1ubuntu2.4\nLink: [CVE-2023-4016](https://avd.aquasec.com/nvd/cve-2023-4016)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libprocps8@2:3.3.16-1ubuntu2.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-28085",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: libsmartcols1\nInstalled Version: 2.34-0.1ubuntu9.4\nVulnerability CVE-2024-28085\nSeverity: MEDIUM\nFixed Version: 2.34-0.1ubuntu9.5\nLink: [CVE-2024-28085](https://avd.aquasec.com/nvd/cve-2024-28085)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libsmartcols1@2.34-0.1ubuntu9.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-12133",
+          "ruleIndex": 16,
+          "level": "warning",
+          "message": {
+            "text": "Package: libtasn1-6\nInstalled Version: 4.16.0-2\nVulnerability CVE-2024-12133\nSeverity: MEDIUM\nFixed Version: 4.16.0-2ubuntu0.1\nLink: [CVE-2024-12133](https://avd.aquasec.com/nvd/cve-2024-12133)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libtasn1-6@4.16.0-2"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-28085",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: libuuid1\nInstalled Version: 2.34-0.1ubuntu9.4\nVulnerability CVE-2024-28085\nSeverity: MEDIUM\nFixed Version: 2.34-0.1ubuntu9.5\nLink: [CVE-2024-28085](https://avd.aquasec.com/nvd/cve-2024-28085)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: libuuid1@2.34-0.1ubuntu9.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-4641",
+          "ruleIndex": 17,
+          "level": "note",
+          "message": {
+            "text": "Package: login\nInstalled Version: 1:4.8.1-1ubuntu5.20.04.4\nVulnerability CVE-2023-4641\nSeverity: LOW\nFixed Version: 1:4.8.1-1ubuntu5.20.04.5\nLink: [CVE-2023-4641](https://avd.aquasec.com/nvd/cve-2023-4641)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: login@1:4.8.1-1ubuntu5.20.04.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-28085",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: mount\nInstalled Version: 2.34-0.1ubuntu9.4\nVulnerability CVE-2024-28085\nSeverity: MEDIUM\nFixed Version: 2.34-0.1ubuntu9.5\nLink: [CVE-2024-28085](https://avd.aquasec.com/nvd/cve-2024-28085)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: mount@2.34-0.1ubuntu9.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-4641",
+          "ruleIndex": 17,
+          "level": "note",
+          "message": {
+            "text": "Package: passwd\nInstalled Version: 1:4.8.1-1ubuntu5.20.04.4\nVulnerability CVE-2023-4641\nSeverity: LOW\nFixed Version: 1:4.8.1-1ubuntu5.20.04.5\nLink: [CVE-2023-4641](https://avd.aquasec.com/nvd/cve-2023-4641)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: passwd@1:4.8.1-1ubuntu5.20.04.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-47038",
+          "ruleIndex": 18,
+          "level": "warning",
+          "message": {
+            "text": "Package: perl-base\nInstalled Version: 5.30.0-9ubuntu0.4\nVulnerability CVE-2023-47038\nSeverity: MEDIUM\nFixed Version: 5.30.0-9ubuntu0.5\nLink: [CVE-2023-47038](https://avd.aquasec.com/nvd/cve-2023-47038)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: perl-base@5.30.0-9ubuntu0.4"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-4016",
+          "ruleIndex": 15,
+          "level": "note",
+          "message": {
+            "text": "Package: procps\nInstalled Version: 2:3.3.16-1ubuntu2.3\nVulnerability CVE-2023-4016\nSeverity: LOW\nFixed Version: 2:3.3.16-1ubuntu2.4\nLink: [CVE-2023-4016](https://avd.aquasec.com/nvd/cve-2023-4016)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: procps@2:3.3.16-1ubuntu2.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2023-39804",
+          "ruleIndex": 19,
+          "level": "warning",
+          "message": {
+            "text": "Package: tar\nInstalled Version: 1.30+dfsg-7ubuntu0.20.04.3\nVulnerability CVE-2023-39804\nSeverity: MEDIUM\nFixed Version: 1.30+dfsg-7ubuntu0.20.04.4\nLink: [CVE-2023-39804](https://avd.aquasec.com/nvd/cve-2023-39804)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: tar@1.30+dfsg-7ubuntu0.20.04.3"
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "CVE-2024-28085",
+          "ruleIndex": 0,
+          "level": "warning",
+          "message": {
+            "text": "Package: util-linux\nInstalled Version: 2.34-0.1ubuntu9.4\nVulnerability CVE-2024-28085\nSeverity: MEDIUM\nFixed Version: 2.34-0.1ubuntu9.5\nLink: [CVE-2024-28085](https://avd.aquasec.com/nvd/cve-2024-28085)"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "neokhajitt/speedtest",
+                  "uriBaseId": "ROOTPATH"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              },
+              "message": {
+                "text": "neokhajitt/speedtest: util-linux@2.34-0.1ubuntu9.4"
+              }
+            }
+          ]
+        }
+      ],
+      "columnKind": "utf16CodeUnits",
+      "originalUriBaseIds": {
+        "ROOTPATH": {
+          "uri": "file:///"
+        }
+      },
+      "properties": {
+        "imageID": "sha256:c0b04ea68e80a0bea47d34eb1946d7ce5baee498413d21438d760855f0147803",
+        "imageName": "neokhajitt/speedtest:latest",
+        "repoDigests": [],
+        "repoTags": [
+          "neokhajitt/speedtest:2.0.0",
+          "neokhajitt/speedtest:latest"
+        ]
+      }
+    }
+  ]
+}
