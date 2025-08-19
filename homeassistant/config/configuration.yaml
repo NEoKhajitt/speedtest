@@ -1,0 +1,54 @@
+mqtt:
+  sensor:
+    - name: "Speedtest Ping Latency"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.attributes.ping_latency }}"
+      unit_of_measurement: "ms"
+
+    - name: "Speedtest Ping Jitter"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.attributes.ping_jitter }}"
+      unit_of_measurement: "ms"
+
+    - name: "Speedtest Download"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.attributes.download_mbps }}"
+      unit_of_measurement: "Mbps"
+
+    - name: "Speedtest Upload"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.attributes.upload_mbps }}"
+      unit_of_measurement: "Mbps"
+
+    - name: "Speedtest Packet Loss"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.attributes.packet_loss }}"
+      unit_of_measurement: "%"
+
+    - name: "Speedtest ISP"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.attributes.isp }}"
+
+    - name: "Speedtest Server"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.state }}"
+
+    - name: "Speedtest Server Location"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.attributes.server_location }}"
+
+    - name: "Speedtest Server Country"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.attributes.server_country }}"
+
+    - name: "Speedtest Timestamp"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.attributes.timestamp }}"
+
+    - name: "Speedtest Result URL"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.attributes.result_url }}"
+
+    - name: "Speedtest Version"
+      state_topic: "homeassistant/speedtestresult"
+      value_template: "{{ value_json.attributes.version }}"
